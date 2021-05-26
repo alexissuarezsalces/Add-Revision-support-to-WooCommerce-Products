@@ -1,0 +1,11 @@
+/*
+ * Add Revision support to WooCommerce Products
+ */
+
+add_filter( 'woocommerce_register_post_type_product', 'cinch_add_revision_support' );
+
+function cinch_add_revision_support( $args ) {
+    $args['supports'][] = 'revisions';
+
+    return $args;
+}
